@@ -1,5 +1,5 @@
 # 💫 About Me:
-👋 Hi, I'm Giacomo  — a curious and motivated data enthusiast<br>📊 I love turning complex data into actionable insights and exploring how AI and data science can drive real-world impact.<br>💡 Currently expanding my skills in machine learning, MLOps, and automation.<br>🎯 I'm currently looking for an internship in Data & AI to grow, contribute, and learn by doing.<br>🌍 Passionate about continuous learning, innovation, and building meaningful solutions.<br><br>
+👋 Hi, I'm Giacomo  — a curious and motivated data enthusiast<br>📊 I love turning complex data into actionable insights and exploring how AI and data science can drive real-world impact.<br>💡 Currently expanding my skills in the world of data, machine learning, MLOps, and smart automation — learning by doing, and curious every step of the way.<br>🎯 I'm currently looking for an internship in Data & AI to grow, contribute, and learn by doing.<br>🌍 Passionate about continuous learning, innovation, and building meaningful solutions.<br><br>
 
 ## 🎓 Education:
 ✏️ Bachelor's Degree in Sociology, University of Naples Federico II, 2017<br>📚 Master in Digital Sociology and Web Analysis, University of Naples Federico II, 2025<br><br>
