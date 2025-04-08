@@ -7,8 +7,6 @@ Welcome to my repository where I practice descriptive data analysis using **R** 
 - [Description](#description)
 - [Technologies Used](#technologies-used)
 - [Repository Structure](#repository-structure)
-- [How to Use](#how-to-use)
-- [License](#license)
 
 ## Description
 
