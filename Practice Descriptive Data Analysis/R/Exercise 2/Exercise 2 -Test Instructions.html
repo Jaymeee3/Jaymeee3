@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test Instructions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 900px;
+      padding: 30px;
+      margin: 40px auto;
+      text-align: left;
+    }
+
+    pre {
+      background-color: #f8f9fa;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      font-size: 14px;
+      text-align: left;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+
+<h1 style:"color: darkblue;">Test Instructions:</h1>
+    <p>
+      The test consists of several tasks—complete as many as possible.<br>
+      Complete the R section using an Rmarkdown file.<br>
+      Submit the compiled Rmarkdown file in HTML format.
+    </p>
+
+    <h3 style="color: darkblue;">Task Info:</h3>
+    <ul>
+      <li>Some tasks may depend on the results of previous ones;</li>
+      <li>Copy the number and description of each task before starting it, to clearly indicate which task you're working on;</li>
+      <li>The code must be commented, since the interpretation of the results is subject to evaluation. Moreover, comments are useful because even if the expected results are not obtained, it will still be possible to evaluate whether the approach was close to the solution.</li>
+    </ul>
+
+    <h4 style="color: darkblue;">R Section – Task List</h4>
+    <p>
+      Consider the dataset <code>Women_Dresses_Reviews_Dataset</code>, which contains information about reviews on women’s clothing purchased on Amazon. Refer to the accompanying metadata file for more details about the nature of the variables.
+    </p>
+    
+    <ol>
+      <li>Import the dataset <code>Women_Dresses_Reviews_Dataset.csv</code> and name it <code>dresses</code> for convenience (Note: the separator is a comma).</li>
+
+      <li>Check that the nature of the imported variables has been correctly identified. If necessary, convert the variables into the appropriate format. Bonus: exclude the variables <code>X</code> and <code>review_text</code>.</li>
+
+      <pre><code># names(movies) = str_to_lower(names(movies))
+
+### rewrite the code starting from here: ###
+# movies$rotten.tomatoes = str_replace(movies$rotten.tomatoes, '/100', '')
+# 
+# movies = movies %>% rename(review_score = rotten.tomatoes,
+#                            prime_video = prime.video,
+#                            disney_plus = disney.) %>%
+#   select(-x)
+</code></pre>
+
+      <li>Create a dataset containing only the clothing items from the departments (<code>department_name</code>) “Tops”, “Dresses” or “Jackets”. Bonus: transform the variable <code>flag_recommend</code> so that 0 corresponds to “no” and 1 to “yes”.</li>
+
+      <li>Refer to the dataset built in Task #3. Graphically represent the variable <code>department_name</code>. Bonus: split the graph based on the variable <code>flag_recommend</code> using the function <code>facet_wrap(~)</code>.</li>
+
+      <li>It is hypothesized that the product division (<code>division_name</code>) somehow affects whether people recommend the product (<code>flag_recommended</code>). Build a contingency table including column percentages and marginals. What information can be gathered from an initial reading of the table? (Hints: the independent variable usually goes in the columns; also consider using the <code>ctab</code> function from the <code>catspec</code> library, and make sure the variables are of type <code>factor</code>).</li>
+
+      <li>Graphically represent the relationship between the two variables (Hint: make sure both variables are of type <code>factor</code>).</li>
+    </ol>
+
+  </div>
+</body>
+</html>

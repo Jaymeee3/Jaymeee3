@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Instructions – R & MySQL Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 900px;
+      padding: 30px;
+      margin: 40px auto;
+      text-align: left;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    code {
+      background-color: #f0f0f0;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: Consolas, monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <h1 style="color: darkblue;">Test Instructions:</h1>
+    <p>
+      The test consists of several tasks—complete as many as possible.<br>
+      Complete the R section of the test in an Rmarkdown file, and the MySQL section in MySQL Workbench. 
+      Submit the compiled Rmarkdown file in HTML format along with the SQL text file.
+    </p>
+
+    <h3 style="color: darkblue;">Task Information:</h2>
+    <ul>
+      <li>Some tasks may depend on the results of previous ones;</li>
+      <li>Copy the number and description of each task before solving it, to clearly indicate which task is being addressed;</li>
+      <li>The code must be commented, as the interpretation of the results will be evaluated. Comments are also useful because, even if the expected results are not achieved, it will still be possible to assess how close the solution was.</li>
+    </ul>
+
+    <h4 style="color: darkblue;">R Section – Task List</h3>
+    <p>
+      Consider the dataset <code>movies</code>, which contains information about movie reviews. 
+      If there are doubts about the content of the variables, consult the metadata file.
+    </p>
+
+    <ol>
+      <li>Import the dataset <code>movies.csv</code> (Note: the separator is a comma).</li>
+      <li>Check that the nature of the imported variables has been correctly identified. If necessary, convert the variables to the appropriate format. Bonus: exclude the variables <code>X</code> and <code>overview</code>.</li>
+      <li>Create a new categorical variable (name: <code>year_cat</code>) with the following levels: pre-2000, 2000–2010, post-2010, based on the variable <code>release_year</code>. Ensure the new variable has the correct data type.</li>
+      <li>Graphically represent the new variable and provide commentary.</li>
+      <li>Create a dataset containing only movies that received more than 500 reviews (<code>vote_count</code>) and sort it based on the score received (<code>vote_count</code>).</li>
+      <li>Analyze the number of votes received by movies based on their year of release. Graphically represent the relationship between the numerical variables <code>release_year</code> and <code>vote_count</code>. Does any kind of relationship emerge? Comment.</li>
+      <li>Represent the relationship again, this time using the categorical variable <code>year_cat</code> created in task 3. 
+        (Hint: reduce the Y-axis range to 0–3000 using the function <code>ylim()</code> for effective visualization, and choose an appropriate chart type for categorical variables).
+      </li>
+    </ol>
+
+    <h4 style="color: darkblue;">MySQL Section – Task List</h3>
+    <ol>
+      <li>Consider the database <code>mydemo</code>. Refer to the table <code>iscrizione</code>. 
+        Extract <code>idiscrizione</code> and <code>dataiscrizione</code> for enrollments from January to March 2020.
+      </li>
+      <li>Refer to the table <code>SurveyIngresso</code>. 
+        The goal is to analyze differences between female employees, male employees, and all other users. 
+        Create a new field <code>impiegato_cat</code> that indicates whether a user is a female employee, a male employee, or belongs to another category. 
+        Insert the result into a temporary table. 
+        (Hint: this information is found in the field <code>occupazione</code>, and the variable should be constructed using <code>CASE WHEN</code>).
+      </li>
+      <li>Refer again to the table created in task #9. 
+        It has been decided that when there are missing values for the field <code>fkCorso</code>, 
+        a placeholder ID of 9999 should be inserted. Perform an <code>UPDATE</code> on the table to finalize this change.
+      </li>
+      <li>Briefly explain what a stored procedure is and how it can be used.</li>
+      <li>Refer to the table <code>corso</code>. 
+        Calculate the course durations in months and extract only those courses with a duration of less than 10 months. 
+        (Bonus: obtain the result using a single query).
+      </li>
+      <li>Refer to the table <code>SurveyIngresso</code>. 
+        Perform a left join with the table <code>iscrizione</code> and also include the <code>tags</code> of the course to which the user enrolled 
+        (field available in the <code>corso</code> table). Describe the relationships between the tables. 
+        (Hint: three tables are involved).
+      </li>
+    </ol>
+
+  </div>
+</body>
+</html>
